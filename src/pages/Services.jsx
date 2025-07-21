@@ -129,16 +129,16 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-ro-black text-white">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 text-white py-20">
+      <section className="bg-gradient-to-br from-ro-dark via-ro-purple to-ro-black text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-violet-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-ro-accent max-w-3xl mx-auto">
               Comprehensive influencer marketing solutions designed to elevate your brand and drive exceptional results.
             </p>
           </div>
@@ -146,13 +146,13 @@ const Services = () => {
       </section>
 
       {/* Main Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-ro-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-ro-accent mb-4">
               Core Services
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-ro-accent max-w-3xl mx-auto">
               Everything you need to launch, manage, and optimize successful influencer marketing campaigns.
             </p>
           </div>
@@ -160,20 +160,20 @@ const Services = () => {
             {mainServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-slate-50 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-slate-100"
+                className="bg-ro-gray p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-ro-dark"
               >
                 <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-900 mb-4">
+                <h3 className="text-2xl font-semibold text-ro-accent mb-4">
                   {service.title}
                 </h3>
-                <p className="text-slate-600 mb-6">
+                <p className="text-ro-accent mb-6">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-slate-700">
+                    <li key={idx} className="flex items-center text-ro-accent">
                       <CheckCircle className="h-5 w-5 text-emerald-500 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -186,13 +186,13 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-ro-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-ro-accent mb-4">
               Additional Services
             </h2>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-ro-accent">
               Specialized services to complement your core influencer marketing strategy.
             </p>
           </div>
@@ -200,15 +200,15 @@ const Services = () => {
             {additionalServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group text-center border border-slate-100"
+                className="bg-ro-dark p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group text-center border border-ro-gray"
               >
                 <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                <h3 className="text-xl font-semibold text-ro-accent mb-3">
                   {service.title}
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-ro-accent">
                   {service.description}
                 </p>
               </div>
@@ -217,120 +217,18 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Choose Your Package
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs and marketing goals.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <div
-                key={index}
-                className={`rounded-2xl p-8 transition-all duration-300 transform hover:-translate-y-2 border ${
-                  pkg.highlight
-                    ? 'bg-gradient-to-br from-violet-600 to-purple-600 text-white shadow-2xl scale-105 border-violet-500'
-                    : 'bg-slate-50 hover:shadow-xl border-slate-200'
-                }`}
-              >
-                <div className="text-center mb-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${pkg.highlight ? 'text-white' : 'text-slate-900'}`}>
-                    {pkg.name}
-                  </h3>
-                  <div className="mb-4">
-                    <span className={`text-4xl font-bold ${pkg.highlight ? 'text-white' : 'text-slate-900'}`}>
-                      {pkg.price}
-                    </span>
-                    <span className={`text-lg ${pkg.highlight ? 'text-violet-100' : 'text-slate-600'}`}>
-                      {pkg.period}
-                    </span>
-                  </div>
-                  <p className={`${pkg.highlight ? 'text-violet-100' : 'text-slate-600'}`}>
-                    {pkg.description}
-                  </p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircle className={`h-5 w-5 mr-3 flex-shrink-0 ${
-                        pkg.highlight ? 'text-violet-200' : 'text-emerald-500'
-                      }`} />
-                      <span className={pkg.highlight ? 'text-white' : 'text-slate-700'}>
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/contact"
-                  className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center group ${
-                    pkg.highlight
-                      ? 'bg-white text-violet-600 hover:bg-slate-100 shadow-lg'
-                      : 'bg-gradient-to-r from-violet-600 to-purple-600 text-white hover:from-violet-700 hover:to-purple-700 shadow-lg'
-                  }`}
-                >
-                  <span className="flex items-center">
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-slate-600">
-              A streamlined approach that ensures campaign success from start to finish.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Strategy", description: "Define goals and target audience" },
-              { step: "02", title: "Matching", description: "Find perfect influencer partners" },
-              { step: "03", title: "Execution", description: "Launch and manage campaigns" },
-              { step: "04", title: "Optimization", description: "Analyze and improve performance" }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-lg">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500 via-violet-600 to-fuchsia-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-ro-purple via-ro-violet to-ro-accent text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl mb-8 text-cyan-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-ro-accent max-w-2xl mx-auto">
             Let's discuss how we can help you achieve your influencer marketing goals with our comprehensive services.
           </p>
           <Link
             to="/contact"
-            className="relative overflow-hidden bg-white text-violet-600 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 inline-flex items-center group shadow-2xl"
+            className="relative overflow-hidden bg-ro-accent text-ro-dark px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-ro-gray hover:text-ro-accent transition-all duration-300 transform hover:scale-105 inline-flex items-center group shadow-2xl"
           >
             <span className="relative z-10 flex items-center">
               Start Your Campaign

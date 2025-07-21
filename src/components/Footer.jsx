@@ -4,7 +4,7 @@ import { Rocket, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-ro-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -16,24 +16,20 @@ const Footer = () => {
                   className="w-10 md:rounded-xl rounded-lg"
                   alt="Logo"
                 />
-                <span className="text-xl font-bold">Reach Orbit</span>
+                <span className="text-xl font-bold text-ro-accent">Reach Orbit</span>
               </Link>
             </div>
-            <p className="text-slate-400 mb-6 max-w-md">
+            <p className="text-ro-accent mb-6 max-w-md">
               Connecting brands with top-tier influencers to create authentic,
               engaging campaigns that drive real results and build lasting
               relationships.
             </p>
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-slate-400">
+              <div className="flex items-center space-x-2 text-ro-gray">
                 <Mail className="h-4 w-4" />
-                <span>contact@reachorbit.com</span>
+                <span>abdullah@reachorbitt.com</span>
               </div>
-              <div className="flex items-center space-x-2 text-slate-400">
-                <Phone className="h-4 w-4" />
-                <span>+1 (973) 253-3800</span>
-              </div>
-              <div className="flex items-center space-x-2 text-slate-400">
+              <div className="flex items-center space-x-2 text-ro-gray">
                 <MapPin className="h-4 w-4" />
                 <span>New Jersey, United States</span>
               </div>
@@ -42,7 +38,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-ro-accent">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -81,7 +77,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-ro-accent">Services</h3>
             <ul className="space-y-2">
               <li>
                 <span className="text-slate-400">Influencer Marketing</span>

@@ -16,13 +16,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-ro-dark shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <img src="/logo.jpeg" className="w-10 md:rounded-xl rounded-lg" alt="Logo" />
-            <span className="md:text-xl text-md font-bold bg-gradient-to-r text-black bg-clip-text">
+            <span className="md:text-xl text-md font-bold bg-gradient-to-r text-ro-accent bg-clip-text">
               Reach Orbit
             </span>
           </Link>
@@ -36,8 +36,8 @@ const Navbar = () => {
                   to={link.path}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     isActive(link.path)
-                      ? "text-violet-600 bg-violet-50 shadow-sm"
-                      : "text-slate-600 hover:text-violet-600 hover:bg-slate-50"
+                      ? "text-ro-accent bg-ro-gray shadow-sm"
+                      : "text-slate-300 hover:text-ro-accent hover:bg-ro-gray"
                   }`}
                 >
                   {link.name}
@@ -75,7 +75,7 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-slate-100">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-ro-dark border-t border-ro-gray">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -83,8 +83,8 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 rounded-lg text-base font-extrabold transition-all duration-300 ${
                     isActive(link.path)
-                      ? "text-violet-600 bg-violet-50"
-                      : "text-slate-600 hover:text-violet-600 hover:bg-slate-50"
+                      ? "text-ro-accent bg-ro-gray"
+                      : "text-slate-300 hover:text-ro-accent hover:bg-ro-gray"
                   }`}
                 >
                   {link.name}
@@ -93,7 +93,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block bg-gradient-to-r from-violet-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-extrabold hover:from-violet-700 hover:to-purple-700 transition-all duration-300 mt-4 shadow-lg"
+                className="block bg-gradient-to-r from-ro-purple to-ro-violet text-white px-3 py-2 rounded-lg text-base font-extrabold hover:from-ro-violet hover:to-ro-accent transition-all duration-300 mt-4 shadow-lg"
               >
                 Get Started
               </Link>

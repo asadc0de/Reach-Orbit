@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white font-matter">
+      <div className="min-h-screen bg-ro-black text-white font-matter">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
